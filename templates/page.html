@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css */
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="link">Home</a>
+        <a href="" class="link">About</a>
+        <a href="" class="link">Languages</a>
+        <div class="dropdown">                    
+            <button class="menubtn">Products</button>
+            <div class="menucontent">
+                __TITLE__
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        __PRODUCTS__CARDS__
+    </div>
+</body>
+<script>
+    const elem = document.getElementsByClassName('product-card');
+
+    function rotateTemplate(element) {
+        element.setAttribute('title','Click to Read Description');
+        if (element.classList.contains('rotate')) {
+            element.setAttribute('title','Click to Read Description');
+            element.classList.remove('rotate');
+        }
+        else {
+            element.classList.add('rotate');
+            element.removeAttribute('title');
+        }
+    }
+    rotateTemplate(elem);
+</script>
+</html>
