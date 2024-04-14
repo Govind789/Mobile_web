@@ -1,7 +1,7 @@
 const fs = require('fs');
 const http = require('http');
 
-const data = fs.readFileSync('./data.json',{encoding:'utf-8'});
+const data = fs.readFileSync('./templates/data.json',{encoding:'utf-8'});
 const htmlTemplate = fs.readFileSync('./templates/page.html',{encoding:'utf-8'});
 const cardTemplate = fs.readFileSync('./templates/card.html',{encoding:'utf-8'});
 const pageCss = fs.readFileSync('./templates/page.css',{encoding:'utf-8'});
